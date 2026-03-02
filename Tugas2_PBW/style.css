@@ -1,0 +1,130 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #2e7d32, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+/* Navigation */
+nav {
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Section utama */
+section {
+    flex: 3;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #66bb6a;
+    border-left: 8px solid #2e7d32;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Gambar dalam card */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #2e7d32;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    color: #1b5e20;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Aside */
+aside {
+    flex: 1;
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #66bb6a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+aside h2, aside h3 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+aside p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+aside a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
