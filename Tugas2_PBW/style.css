@@ -1,4 +1,3 @@
-/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Header */
 header {
     background: linear-gradient(to right, #2e7d32, #66bb6a);
     color: white;
@@ -23,7 +21,6 @@ header p {
     font-size: 14px;
 }
 
-/* Navigation */
 nav {
     background-color: #1b5e20;
     text-align: center;
@@ -41,14 +38,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Container Layout */
 .container {
     display: flex;
     padding: 20px;
     gap: 20px;
 }
 
-/* Section utama */
 section {
     flex: 3;
 }
@@ -58,7 +53,6 @@ section h2 {
     color: #2e7d32;
 }
 
-/* Card */
 .card {
     background-color: #ffffff;
     padding: 15px;
@@ -69,7 +63,6 @@ section h2 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Gambar dalam card */
 .card img {
     width: 100%;
     height: 200px;
@@ -89,7 +82,6 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Aside */
 aside {
     flex: 1;
     background-color: #e8f5e9;
@@ -120,7 +112,6 @@ aside a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
 footer {
     background-color: #1b5e20;
     color: white;
