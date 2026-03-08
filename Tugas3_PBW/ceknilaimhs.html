@@ -1,13 +1,12 @@
 <html>
 <head>
 <title>Cek Nilai Mahasiswa</title>
-
 <style>
-
 body{
     font-family: Arial;
     margin:0;
-    background: linear-gradient(to right, #f2f2f2, #e6e6e6);}
+    background: linear-gradient(to right, #f2f2f2, #e6e6e6);
+}
 .header{
     background-color: red;
     color: white;
@@ -15,27 +14,32 @@ body{
     padding: 18px;
     font-size: 22px;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);}
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 .container{
     width: 420px;
     background: white;
     margin: 70px auto;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 label{
-    font-weight: bold;}
-input[type=text]{
+    font-weight: bold;
+}
+input[type=text], input[type=number]{
     width: 100%;
     padding: 10px;
     margin-top: 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    transition: 0.3s;}
-input[type=text]:focus{
+    transition: 0.3s;
+}
+input:focus{
     border-color: red;
     box-shadow: 0 0 5px rgba(255,0,0,0.4);
-    outline: none; }
+    outline: none;
+}
 button{
     background-color: red;
     color: white;
@@ -45,25 +49,32 @@ button{
     cursor: pointer;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: 0.3s; }
+    transition: 0.3s;
+}
 button:hover{
     background-color: darkred;
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3);}
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
 .hasil{
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #f9f9f9;}
+    background-color: #f9f9f9;
+}
 </style>
-
 <script>
 function ceknilai()
 {
     var nim = document.getElementById("nim").value;
-    var nilai = document.getElementById("nilai").value;
+    var nilai = parseInt(document.getElementById("nilai").value);
     var huruf;
 
+    if(nim == "" || isNaN(nilai))
+    {
+        document.getElementById("hasil").innerHTML = "NIM dan Nilai harus diisi!";
+        return;
+    }
     if (nilai >= 80 && nilai <= 100)
     {
         huruf = "A";
@@ -89,7 +100,6 @@ function ceknilai()
         document.getElementById("hasil").innerHTML = "Nilai tidak valid!";
         return;
     }
-
     document.getElementById("hasil").innerHTML =
     "NIM : " + nim + "<br>Huruf Mutu : " + huruf;
 }
@@ -104,7 +114,7 @@ PROGRAM CEK NILAI MAHASISWA
 <input type="text" id="nim">
 <br><br>
 <label>Nilai :</label><br>
-<input type="text" id="nilai">
+<input type="number" id="nilai">
 <br>
 <button onclick="ceknilai()">Cek Nilai</button>
 <div class="hasil">
