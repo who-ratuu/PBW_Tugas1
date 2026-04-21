@@ -1,0 +1,50 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Form Belanja ATK</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        label { display: block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h2>Form Belanja Alat Tulis</h2>
+
+<form action="proses.php" method="POST">
+
+    <label>Nama:
+        <input type="text" name="nama" required minlength="3">
+    </label>
+
+    <label>NIM:</label>
+    <input class="input-text" type="text" name="nim" required minlength="5" maxlength="10">
+
+     <label>Email:
+        <input type="email" name="email" required>
+    </label>
+
+    <label>Jenis Layanan:</label>
+    <input type="radio" name ="layanan" value="Regular"> Regular 
+    <input type="radio" name ="layanan" value="Prioritas"> Prioritas
+
+    <label>Pilih Barang:</label>
+    <input type="checkbox" name="barang[]" value="Penggaris"> Penggaris<br>
+    <input type="checkbox" name="barang[]" value="Pulpen"> Pulpen<br>
+    <input type="checkbox" name="barang[]" value="Pensil"> Pensil<br>
+
+    <label>Jumlah Penggaris</label>
+    <input class="input-text" type="number" name="jumlah_penggaris" min="1">
+
+    <label>Jumlah Pulpen</label>
+    <input type="input-text" type="number" name="jumlah_pulpen" min="1">
+
+    <label>Jumlah Pensil</label>
+    <input type="input-text" type="number" name="Jumlah_Pensil" min="1">
+
+    <button>Kirim</button>
+
+    </form>
+
+</body>
+</html>

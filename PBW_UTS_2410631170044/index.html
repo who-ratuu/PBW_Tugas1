@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Belanja ATK</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .form-box {
+            width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .judul {
+            text-align: center;
+        }
+
+        .input-text {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .pilihan {
+            margin-top: 10px;
+        }
+
+        .tombol {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(42, 163, 224);
+            color: white;
+            border: none;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+
+<h2 class="judul">Form Belanja Alat Tulis</h2>
+
+<form action="proses.php" method="POST">
+
+    <label>Nama:</label>
+    <input class="input-text" type="text" name="nama" required minlength="3">
+
+    <label>NIM:</label>
+    <input class="input-text" type="text" name="nim" required minlength="5" maxlength="10">
+
+    <label>Email:</label>
+    <input class="input-text" type="email" name="email" required>
+
+    <label>Jenis Layanan:</label>
+    <div class="pilihan">
+        <input type="radio" name="layanan" value="reguler" required> Reguler
+        <input type="radio" name="layanan" value="prioritas"> Prioritas
+    </div>
+
+    <label>Pilih Barang:</label>
+    <div class="pilihan">
+        <input type="checkbox" name="barang[]" value="pulpen"> Pulpen<br>
+        <input type="checkbox" name="barang[]" value="buku"> Buku<br>
+        <input type="checkbox" name="barang[]" value="penghapus"> Penghapus
+    </div>
+
+    <label>Jumlah Pulpen:</label>
+    <input class="input-text" type="number" name="jumlah_pulpen" min="1">
+
+    <label>Jumlah Buku:</label>
+    <input class="input-text" type="number" name="jumlah_buku" min="1">
+
+    <label>Jumlah Penghapus:</label>
+    <input class="input-text" type="number" name="jumlah_penghapus" min="1">
+
+    <button class="tombol" type="submit">Kirim</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
+

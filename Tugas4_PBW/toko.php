@@ -9,7 +9,6 @@ $jumlah_beli = 2;
 $total_sebelum_pajak = $harga_barang["Keyboard"] * $jumlah_beli;
 $pajak = $total_sebelum_pajak * PAJAK;
 $total_bayar = $total_sebelum_pajak + $pajak;
-
 ?>
 
 <!DOCTYPE html>
